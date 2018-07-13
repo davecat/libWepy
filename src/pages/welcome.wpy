@@ -1,6 +1,6 @@
 <style>
     .spinner {
-        margin: 100px auto;
+        margin: 100px auto 20px auto;
         width: 30px;
         height: 30px;
         position: relative;
@@ -302,28 +302,39 @@
         }
     }
 
-    .loading {
-        text-align: center;
-        color: #0BB20C;
-    }
-    .ml6 {
-        position: relative;
-        font-weight: 900;
-        font-size: 3.3em;
+
+    .dave {
+        color:green ;
+        position: absolute;
+        -webkit-animation:bouncedelay  2s infinite ease-in-out;
+        animation: bouncedelay 2s infinite ease-in-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
     }
 
-    .ml6 .text-wrapper {
-        position: relative;
-        display: inline-block;
-        padding-top: 0.2em;
-        padding-right: 0.05em;
-        padding-bottom: 0.1em;
-        overflow: hidden;
+     .myscroll1 {
+         left: 50%;
+         margin-left: -35px;
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
     }
-
-    .ml6 .letter {
-        display: inline-block;
-        line-height: 1em;
+     .myscroll2 {
+         left: 50%;
+         margin-left: -17px;
+        -webkit-animation-delay: -0.6s;
+        animation-delay: -0.6s;
+    }
+    .myscroll3 {
+        right: 50%;
+        margin-right: -17px;
+        -webkit-animation-delay: -0.4s;
+        animation-delay: -0.4s;
+    }
+    .myscroll4 {
+        right: 50%;
+        margin-right: -30px;
+        -webkit-animation-delay: -0.2s;
+        animation-delay: -0.2s;
     }
 </style>
 <template>
@@ -347,7 +358,12 @@
             <view class="circle4"></view>
         </view>
     </view>
-    <view class="loading">登录中...</view>
+    <view>
+        <view class=" dave myscroll1">登</view>
+        <view class=" dave myscroll2">录</view>
+        <view class=" dave myscroll3">中</view>
+        <view class=" dave myscroll4">...</view>
+    </view>
 </template>
 
 <script>
@@ -373,9 +389,11 @@
                 withCredentials: false,
                 success: function ({userInfo}) {
                     console.log(userInfo);
-                    wx.redirectTo({
-                        url: '../example/index'
-                    })
+                    setTimeout(function () {
+                        wx.redirectTo({
+                            url: '../example/index'
+                        })
+                    },2000)
                 },
                 fail: function (r) {
                 },
@@ -387,7 +405,7 @@
                 key: "tonken",
                 data: ""
             });
-            // this.checkVerAction();
+            this.checkVerAction();
         }
     }
 </script>
