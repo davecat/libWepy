@@ -391,7 +391,7 @@
                     console.log(userInfo);
                     setTimeout(function () {
                         wx.redirectTo({
-                            url: '../example/index'
+                            url: './home'
                         })
                     },2000)
                 },
