@@ -1,0 +1,13 @@
+{
+    "description": "wepy demo",
+    "setting": {
+        "urlCheck": true,
+        "es6": false,
+        "postcss": false,
+        "minified": false
+    },
+    "compileType": "miniprogram",
+    "appid": "wx597bdf83a4340ac0",
+    "projectname": "libWepy",
+    "miniprogramRoot": "./dist"
+}
