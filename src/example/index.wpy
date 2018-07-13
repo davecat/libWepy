@@ -89,7 +89,7 @@
     import wepy from 'wepy';
     import toast from 'wepy-simple-toast';
 
-    export default class extends wepy.page {
+    export default class Index extends wepy.page {
         config = {
             navigationBarTitleText: 'simple-toast'
         }
