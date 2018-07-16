@@ -194,7 +194,7 @@
             ],
             housingList: [
                 {
-                    picUrl: '../images/1.JPG',
+                    picUrl: '../images/1.jpg',
                     rentalType: '整租',
                     name: '次卧',
                     address: '北京市朝阳区',
@@ -218,7 +218,7 @@
                     createdDate: '本周上新'
                 },
                 {
-                    picUrl: '../images/3.JPG',
+                    picUrl: '../images/3.jpg',
                     rentalType: '整租',
                     name: '次卧',
                     address: '北京市丰台区',
